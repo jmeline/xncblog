@@ -1,7 +1,33 @@
 extends layout
 
+block sidebar
+  div#sidebar-wrapper
+    ul.sidebar-nav
+        li.sidebar-brand
+          a(href="#") Start Bootstrap
+        li
+          a(href="#") Blog
+        li
+          a(href="#") Shortcuts
+        li
+          a(href="#") Overview
+        li
+          a(href="#") Events
+        li
+          a(href="#") About
+        li
+          a(href="#") Services
+        li
+          a(href="#") Contact
+        // End of comment
+
 block content
-  h1= title
-  p
-    | Welcome to #{title}
-    | #{name}!
+  div#page-content-wrapper
+    div.container-fluid
+      div.row
+        div.col-lg-12
+          h1= title
+            p
+              | Welcome to #{title} [ #{name} ]!
+
+
