@@ -9,4 +9,13 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/blog', function(req, res, next){
+    res.render('./sidebar_links/blog', {
+    });
+});
+router.get('/programming', function(req, res, next){
+    res.render('./sidebar_links/programming', {
+    });
+});
+
 module.exports = router;
