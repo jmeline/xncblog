@@ -1,17 +1,16 @@
 "use strict";
 
 var React = require('react');
-var AuthorApi = require('../../api/authorApi');
 
-var Authors = React.createClass({
+var Tutorials = React.createClass({
     render: function(){
         return (
             <div className="container-fluid">
-                <h1>Authors</h1>
+                <h1>Tutorials</h1>
+                <h2>Todo: fill with awesome content</h2>
             </div>
         );
     }
 });
 
-
-module.exports = Authors;
+module.exports = Tutorials;
