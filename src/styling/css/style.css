@@ -1,0 +1,7 @@
+.navbar-brand > img{
+    height: 50px;
+}
+
+.navbar a.navbar-brand {padding: 0px 15px 8px; }
+
+
