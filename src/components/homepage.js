@@ -9,7 +9,7 @@ var Home = React.createClass({
                 <h1>Pluralsight Administration</h1>
                 <p>React, React Router, and Flux for ultra-responsive we apps. </p>
             </div>
-        )
+        );
     }
 });
 

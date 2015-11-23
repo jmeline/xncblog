@@ -8,7 +8,7 @@ var Authors = React.createClass({
     getInitialState: function(){
         return {
             authors: []
-        }
+        };
     },
 
     componentDidMount: function(){
