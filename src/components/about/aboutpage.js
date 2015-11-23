@@ -5,10 +5,10 @@ var React = require('react');
 var About = React.createClass({
     render: function(){
         return (
-            <div className="container-fluid">
+            <div>
                 <h1>About</h1>
                 <p>
-                    This application uses the following technologies:
+                    <h2>This application uses the following technologies:</h2>
                     <ul>
                         <li>React</li>
                         <li>React Router</li>

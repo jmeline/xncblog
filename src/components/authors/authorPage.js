@@ -20,7 +20,7 @@ var Authors = React.createClass({
     render: function(){
 
         return (
-            <div className="container-fluid">
+            <div>
                 <h1>Authors</h1>
                 <AuthorList authors={this.state.authors} />
             </div>
