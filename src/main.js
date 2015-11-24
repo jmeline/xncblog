@@ -4,12 +4,12 @@ var Router = require('react-router');
 var routes = require('./routes');
 
 // History Routing
-Router.run(routes, Router.HistoryLocation, function(Handler){
+// Router.run(routes, Router.HistoryLocation, function(Handler){
+//     React.render(<Handler/>, document.getElementById('app'));
+// });
+
+// Hash Routing
+Router.run(routes, function(Handler){
     React.render(<Handler/>, document.getElementById('app'));
 });
 
-// Hash Routing
-// Router.run(routes, function(Handler){
-//     React.render(<Handler/>, document.getElementById('app'));
-// });
-//
