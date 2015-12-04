@@ -4,7 +4,8 @@ var React = require('react');
 var Router = require('react-router');
 var Toastr = require('toastr');
 var AuthorForm = require('./authorForm');
-var AuthorApi = require('../../api/authorApi');
+var AuthorActions = require('../../actions/authorActions');
+var AuthorStore = require('../../stores/authorStores');
 
 var ManageAuthorPage = React.createClass({
     mixins: [
@@ -31,7 +32,7 @@ var ManageAuthorPage = React.createClass({
         var authorId = this.props.params.id; // from the path '/author:id'
 
         if (authorId) {
-            this.setState({author: AuthorApi.getAuthorById(authorId)});
+            this.setState({author: AuthorStore.getAuthorById(authorId)});
         }
 
     },
@@ -52,7 +53,7 @@ var ManageAuthorPage = React.createClass({
         if (!this.isAuthorValid()){
             return;
         }
-        AuthorApi.saveAuthor(this.state.author);
+        AuthorActions.createAuthor(this.state.author);
         this.setState({dirty: false});
         Toastr.success("Author: {" + firstName + " " + lastName + "} saved!");
         this.transitionTo('authors');
