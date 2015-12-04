@@ -39,7 +39,6 @@ var ManageAuthorPage = React.createClass({
 
     setAuthorState: function(event){
         this.setState({dirty: true});
-        console.log("State: " + this.state.dirty);
         var field = event.target.name;
         var value = event.target.value;
         this.state.author[field] = value;
@@ -53,9 +52,16 @@ var ManageAuthorPage = React.createClass({
         if (!this.isAuthorValid()){
             return;
         }
-        AuthorActions.createAuthor(this.state.author);
+
+        var msg = "Author: {" + firstName + " " + lastName + "}";
+        if (this.state.author.id){
+            AuthorActions.updateAuthor(this.state.author);
+            Toastr.success(msg + " updated!");
+        } else {
+            AuthorActions.createAuthor(this.state.author);
+            Toastr.success(msg + " added!");
+        }
         this.setState({dirty: false});
-        Toastr.success("Author: {" + firstName + " " + lastName + "} saved!");
         this.transitionTo('authors');
     },
 
