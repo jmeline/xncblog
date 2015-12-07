@@ -17,9 +17,9 @@ var Courses = React.createClass({
     },
     render: function(){
         return (
-            <div className="container-fluid">
+            <div>
+                <h1>Courses</h1>
                 <CourseList courses={this.state.courses} />
-
             </div>
         );
     }

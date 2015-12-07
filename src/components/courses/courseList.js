@@ -22,7 +22,6 @@ var CoursesList = React.createClass({
 
         return (
             <div className="container-fluid">
-                <h1>Courses</h1>
                 <table className="table">
                     <thead>
                         <th>Title</th>
