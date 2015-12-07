@@ -17,6 +17,7 @@ var routes = (
         <Route name="addAuthor" path="author" handler={require('./components/authors/manageAuthorPage')} />
         <Route name="manageAuthor" path="author/:id" handler={require('./components/authors/manageAuthorPage')} />
         <Route name="about" handler={require('./components/about/aboutpage')} />
+        <Route name="addCourses" path="course" handler={require('./components/courses/manageCoursePage')} />
         <Route name="courses" handler={require('./components/courses/coursePage')} />
         <Route name="tutorials" handler={require('./components/tutorials/tutorialspage')} />
 

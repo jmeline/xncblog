@@ -22,7 +22,7 @@ module.exports = {
         {
             title: "Web Component Fundamentals",
             author: 'Cory House',
-            category: "HTML5h",
+            category: "HTML5",
             length: "5:10"
         }
 

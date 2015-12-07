@@ -12,6 +12,8 @@ var CoursesList = React.createClass({
         var createCourseRow = function(course){
             return (
                 <tr key={course.title}>
+                    <th>Delete</th>
+                    <th>Watch</th>
                     <td>{course.title}</td>
                     <td>{course.author}</td>
                     <td>{course.category}</td>
@@ -24,6 +26,8 @@ var CoursesList = React.createClass({
             <div className="container-fluid">
                 <table className="table">
                     <thead>
+                        <th></th>
+                        <th></th>
                         <th>Title</th>
                         <th>Author</th>
                         <th>Category</th>
