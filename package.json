@@ -1,0 +1,42 @@
+{
+  "name": "xncblog",
+  "version": "1.0.0",
+  "description": "Personal blog to be on public domain at some point",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "browserify": "^11.2.0",
+    "flux": "^2.1.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-open": "^1.0.0",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "object-assign": "^4.0.1",
+    "react": "^0.13.3",
+    "react-router": "^0.13.5",
+    "reactify": "^1.1.1",
+    "toastr": "^2.1.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-open": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jmeline/xncblog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmeline/xncblog/issues"
+  },
+  "homepage": "https://github.com/jmeline/xncblog#readme"
+}

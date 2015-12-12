@@ -1,7 +1,10 @@
+reactjs
 # Logs
 logs
 *.log
 
+*.zip
+dist
 # Runtime data
 pids
 *.pid
