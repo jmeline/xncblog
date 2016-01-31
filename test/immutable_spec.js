@@ -15,7 +15,7 @@ describe('immutability', () => {
             expect(state).to.equal(42);
         });
     });
-    describe('A list', () => {
+    describe('a list', () => {
         function addMovie(currentState, movie){
             return currentState.push(movie);
         }
