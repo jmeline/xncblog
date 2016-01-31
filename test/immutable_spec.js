@@ -50,8 +50,9 @@ describe('immutability', () => {
 
             expect(nextState).to.equal(Map({
                 movies: List.of(
-                    'Transpotting',
-                    '28 days later'
+                    'Trainspotting',
+                    '28 days later',
+                    'Sunshine'
                 )
             }));
         });
