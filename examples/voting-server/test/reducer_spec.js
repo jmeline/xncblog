@@ -47,4 +47,29 @@ describe('reducer', () => {
       entries: []
     }));
   });
+
+  it('handles undefined state', () => {
+    const action = { type: SET_ENTRIES, entries: ['Trainspotting']};
+    const nextState = reducer(undefined, action);
+    expect(nextState).to.equal(fromJS({
+      entries: ['Trainspotting']
+    }));
+  });
+
+  it('can be used with reduce', () => {
+    const actions = [
+      { type: SET_ENTRIES, entries: ['Trainspotting', '28 Days Later'] },
+      { type: NEXT },
+      { type: VOTE, entries: 'Trainspotting' },
+      { type: VOTE, entries: '28 Days Later' },
+      { type: VOTE, entries: 'Trainspotting' },
+      { type: NEXT }
+    ];
+
+    const finalState = actions.reduce(reducer, Map());
+    expect(finalState).to.equal(fromJS({
+      winner: 'Trainspotting'
+    }));
+  });
+
 });

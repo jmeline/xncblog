@@ -1,8 +1,8 @@
 // reducer.js
 import { setEntries, next, vote } from './core';
-import { SET_ENTRIES, NEXT, VOTE } from './constants/votingActionTypes';
+import { SET_ENTRIES, NEXT, VOTE, INITIAL_STATE } from './constants/votingActionTypes';
 
-export default function reducer(state, action){
+export default function reducer(state = INITIAL_STATE, action){
   // figure out which function to call and call it
   switch(action.type)
   {
@@ -13,4 +13,6 @@ export default function reducer(state, action){
     case VOTE:
       return vote(state, action.entries);
   }
+
+  return state;
 }

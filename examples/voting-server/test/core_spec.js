@@ -33,6 +33,7 @@ describe('application logic', () => {
             }));
         });
     });
+
     describe('vote', () => {
         it('creates a tally for the voted entry', () => {
             const state = Map({
