@@ -1,4 +1,4 @@
-import { Map, fromJS } from 'immutable';
+import { List, Map, fromJS } from 'immutable';
 import { expect } from 'chai';
 import { SET_ENTRIES, NEXT, VOTE } from '../src/constants/votingActionTypes';
 import reducer from '../src/reducer';
@@ -32,19 +32,16 @@ describe('reducer', () => {
   it('handles VOTE', () => {
     const initialState = fromJS({
       vote: {
-        pair: ['Trainspotting', '28 Days Later']
-      },
-      entries: []
+        pair: List.of('Trainspotting', '28 Days Later')
+      }
     });
     const action = {type: VOTE, entries: 'Trainspotting'};
     const nextState = reducer(initialState, action);
-
     expect(nextState).to.equal(fromJS({
       vote: {
-        pair: ['Trainspotting', '28 Days Later'],
-        tally: { 'Trainspotting': 1 }
-      },
-      entries: []
+        pair: List.of('Trainspotting', '28 Days Later'),
+        tally: Map({ 'Trainspotting': 1 })
+      }
     }));
   });
 
